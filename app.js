@@ -10,10 +10,6 @@ var usersRouter = require('./routes/users');
 var loginRouter = require('./routes/login');
 var locatairesRouter = require('./routes/locataires');
 
-const dbConfig = require("./configs/database.config.ts");
-
-var sql = require("mssql");
-
 var app = express();
 
 app.use(cors({
@@ -33,12 +29,6 @@ app.use('/login', loginRouter);
 
 app.use('/api/locataires', locatairesRouter);
 
-sql.connect(dbConfig, function (err) {
-
-    if (err) console.log(err);
-
-});
-
-app.use(sql);
+//app.use(sql);
 
 module.exports = app;
