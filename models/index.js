@@ -19,7 +19,6 @@ if (config.use_env_variable) {
 fs
   .readdirSync(__dirname)
   .filter(file => {
-
     return (
       file.indexOf('.') !== 0 &&
       file !== basename &&
@@ -33,7 +32,6 @@ fs
   });
 
 Object.keys(db).forEach(modelName => {
-
   if (db[modelName].associate) {
     db[modelName].associate(db);
   }
@@ -41,7 +39,5 @@ Object.keys(db).forEach(modelName => {
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
-
-//db.locataire = require("./Locataire.ts")(sequelize, Sequelize);
 
 module.exports = db;
