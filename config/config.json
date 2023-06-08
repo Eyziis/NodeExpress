@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "root",
+    "password": "",
+    "database": "nodejs",
+    "host": "DESKTOP-NCEPLER",
+    "dialect": "mssql"
+  },
+  "test": {
+    "username": "root",
+    "password": "",
+    "database": "laravel",
+    "host": "DESKTOP-NCEPLER",
+    "dialect": "mssql"
+  },
+  "production": {
+    "username": "root",
+    "password": "",
+    "database": "laravel",
+    "host": "DESKTOP-NCEPLER",
+    "dialect": "mssql"
+  }
+}
