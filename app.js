@@ -10,18 +10,16 @@ var usersRouter = require('./routes/users');
 var loginRouter = require('./routes/login');
 var locatairesRouter = require('./routes/locataires');
 
-//var db2 = require('./models');
-
 var app = express();
 
 app.use(cors({
-    credentials:true,
-    origin:["http://localhost:4200"]
+    credentials: true,
+    origin: ["http://localhost:4200"]
 }));
 
 app.use(logger('dev'));
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({extended: false}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
