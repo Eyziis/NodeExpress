@@ -10,6 +10,8 @@ var usersRouter = require('./routes/users');
 var loginRouter = require('./routes/login');
 var locatairesRouter = require('./routes/locataires');
 
+//var db2 = require('./models');
+
 var app = express();
 
 app.use(cors({
@@ -28,7 +30,5 @@ app.use('/users', usersRouter);
 app.use('/login', loginRouter);
 
 app.use('/api/locataires', locatairesRouter);
-
-//app.use(sql);
 
 module.exports = app;
