@@ -1,22 +1,22 @@
 {
   "development": {
-    "username": "root",
-    "password": "",
-    "database": "nodejs",
-    "host": "DESKTOP-NCEPLER",
+    "username": "sa",
+    "password": "NeceSS@1re",
+    "database": "node",
+    "host": "AIG-LT-01",
     "dialect": "mssql"
   },
   "test": {
-    "username": "root",
-    "password": "",
-    "database": "nodejs",
+    "username": "sa",
+    "password": "NeceSS@1re",
+    "database": "node",
     "host": "DESKTOP-NCEPLER",
     "dialect": "mssql"
   },
   "production": {
-    "username": "root",
-    "password": "",
-    "database": "nodejs",
+    "username": "sa",
+    "password": "NeceSS@1re",
+    "database": "node",
     "host": "DESKTOP-NCEPLER",
     "dialect": "mssql"
   }
