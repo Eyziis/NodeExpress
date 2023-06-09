@@ -29,30 +29,24 @@ router.get('/test', function (req, res, next) {
 router.get('/:locataireId', async function (req, res, next) {
     var Result = Locataire.findByPk(req.params.locataireId);
     Result.then((r) => {
-        var loc = [];
-        loc[0] = r
-        res.send(loc);
+        //res.send(200,r);
+        res.status(200).json(r);
     })
 });
 router.delete('/:locataireId', async function (req, res, next) {
     var Result = Locataire.destroy({where: { id:req.params.locataireId}});
     Result.then((r) => {
-        res.send({code:200, content:'SUCCES'});
+        res.status(200);
     })
 });
 
 router.put('/', async function (req, res, next) {
-    console.log(req.body)
-
-    Locataire.update(req.body, {where: {id: req.body.id}})
-    res.send(req.body)
-    /*
-    var Result = Locataire.destroy({where: { id:req.params.locataireId}});
+    var Result = Locataire.update(req.body, {where: {id: req.body.id}})
     Result.then((r) => {
-        res.send({code:200, content:'SUCCES'});
+        res.status(200).json(req.body);
+    }).catch((err)=>{
+        res.status(500).json(err);
     })
-
-     */
 });
 
 router.post('/', async function (req, res, next) {
