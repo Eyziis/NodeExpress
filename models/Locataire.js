@@ -7,8 +7,22 @@ module.exports = (sequelize, DataTypes) => {
                 notEmpty: true
             }
         },
+        email: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                notEmpty: true
+            }
+        },
         age: {
             type: DataTypes.INTEGER,
+            allowNull: false,
+            validate: {
+                notEmpty: true
+            }
+        },
+        date_e: {
+            type: DataTypes.DATE,
             allowNull: false,
             validate: {
                 notEmpty: true
